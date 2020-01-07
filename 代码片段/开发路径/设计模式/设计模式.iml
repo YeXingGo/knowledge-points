@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/观察者模式" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/模板方法" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/绘图挂钩" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/内部类" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/单例" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+  </component>
+</module>

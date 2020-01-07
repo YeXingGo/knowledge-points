@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+     http://www.springframework.org/schema/mvc      
+ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd    
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 开启注解 -->
+	<mvc:annotation-driven/>
+
+	<mvc:default-servlet-handler/>
+	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
+	<!-- 定义跳转的文件的前后缀 ，视图模式配置-->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>  
+	
+	
+		<!-- 开启shiro注解，注意当用到用户权限时，才会执行realm中的权限方法 -->	
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+	<bean
+		class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+		depends-on="lifecycleBeanPostProcessor">
+		<property name="proxyTargetClass" value="true" />
+	</bean>
+	<bean
+		class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager" />
+	</bean>
+	<!-- 异常处理 -->
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<!-- 认证异常 -->
+				<prop key="org.apache.shiro.authz.UnauthenticatedException">login</prop>
+				<!-- key 是异常的完全限定名 值是视图名   授权异常  跳转页面refuse.jsp-->
+				<prop key="org.apache.shiro.authz.UnauthorizedException">refuse</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- 注解扫描包 -->
+	<context:component-scan base-package="com.ssm" />
+	
+	
+</beans>

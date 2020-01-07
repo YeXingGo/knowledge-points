@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.MoaWeekMapper" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.entiy.MoaWeek" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="wnumber" property="wnumber" jdbcType="INTEGER" />
+        <result column="begindate" property="begindate" jdbcType="DATE" />
+        <result column="enddate" property="enddate" jdbcType="DATE" />
+        <result column="createdate" property="createdate" jdbcType="TIMESTAMP" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+        <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+        <result column="del_flag" property="delFlag" jdbcType="CHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, wnumber, begindate, enddate, createdate, create_by, create_date, update_by, update_date, 
+        remarks, del_flag
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from moa_week
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from moa_week
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="com.ssm.entiy.MoaWeek" >
+        insert into moa_week (id, wnumber, begindate, 
+            enddate, createdate, create_by, 
+            create_date, update_by, update_date, 
+            remarks, del_flag)
+        values (#{id,jdbcType=INTEGER}, #{wnumber,jdbcType=INTEGER}, #{begindate,jdbcType=DATE}, 
+            #{enddate,jdbcType=DATE}, #{createdate,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}, 
+            #{createDate,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP}, 
+            #{remarks,jdbcType=VARCHAR}, #{delFlag,jdbcType=CHAR})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.ssm.entiy.MoaWeek" >
+        insert into moa_week
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="wnumber != null" >
+                wnumber,
+            </if>
+            <if test="begindate != null" >
+                begindate,
+            </if>
+            <if test="enddate != null" >
+                enddate,
+            </if>
+            <if test="createdate != null" >
+                createdate,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="wnumber != null" >
+                #{wnumber,jdbcType=INTEGER},
+            </if>
+            <if test="begindate != null" >
+                #{begindate,jdbcType=DATE},
+            </if>
+            <if test="enddate != null" >
+                #{enddate,jdbcType=DATE},
+            </if>
+            <if test="createdate != null" >
+                #{createdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.ssm.entiy.MoaWeek" >
+        update moa_week
+        <set >
+            <if test="wnumber != null" >
+                wnumber = #{wnumber,jdbcType=INTEGER},
+            </if>
+            <if test="begindate != null" >
+                begindate = #{begindate,jdbcType=DATE},
+            </if>
+            <if test="enddate != null" >
+                enddate = #{enddate,jdbcType=DATE},
+            </if>
+            <if test="createdate != null" >
+                createdate = #{createdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.ssm.entiy.MoaWeek" >
+        update moa_week
+        set wnumber = #{wnumber,jdbcType=INTEGER},
+            begindate = #{begindate,jdbcType=DATE},
+            enddate = #{enddate,jdbcType=DATE},
+            createdate = #{createdate,jdbcType=TIMESTAMP},
+            create_by = #{createBy,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIMESTAMP},
+            update_by = #{updateBy,jdbcType=VARCHAR},
+            update_date = #{updateDate,jdbcType=TIMESTAMP},
+            remarks = #{remarks,jdbcType=VARCHAR},
+            del_flag = #{delFlag,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <!-- MoaWeek findWeekDate(@Param("date")String date); -->
+    <select id="findWeekDate" resultMap="BaseResultMap">
+    		select * from moa_week where begindate  &lt;= #{date} and enddate  &gt;= #{date}
+    </select>
+    <!-- List<MoaWeek> getAllMoaWeek(); -->
+    <select id="getAllMoaWeek" resultMap="BaseResultMap">
+    		select * from moa_week 
+    </select>
+    <!-- List<MoaWeek> LikeMoaWeek(@Param("souMoaWeek")SouMoaWeek souMoaWeek); -->
+    <select id="LikeMoaWeek" resultMap="BaseResultMap">
+    		select * from moa_week 
+    		<trim  prefix="where" prefixOverrides="and">
+    			<if test="souMoaWeek.id != null">
+    				id=#{souMoaWeek.id}
+    			</if>
+    			<if test="souMoaWeek.date!= null">
+    				 and
+    				     begindate &lt;= #{souMoaWeek.date} and #{souMoaWeek.date} &lt;=enddate
+    			</if>
+    			
+    		</trim>
+    </select>
+    <!-- MoaWeek getWeekMapper(@Param("data")String mondayDate); -->
+    <select id="getWeekMapper" resultMap="BaseResultMap">
+    		select * from moa_week  where begindate=#{data}
+    </select>
+</mapper>

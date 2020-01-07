@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d97c91a9-a7a2-4328-a033-4471cfb9ff02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_7_线程阻塞工具类/LockSupportDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_7_线程阻塞工具类/locksupport_interrupted/LockSupportIntDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_8_Guava和RateLimiter限流/RateLimiterDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T2_线程复用线程池/T1_固定大小的线程池/ThreadPoolDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/知识点/classload/类加载顺序/Class_ForName_Class_loadClass区别/ClassLoadDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/知识点/反射/反射方式/ClassDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/知识点/反射/数据类型与包装类/PreClassDemo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../suanfa/src/main/java/算法/插入排序/InsertSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../suanfa/src/main/java/算法竞赛_2/T2_循环结构程序设计/T5_注解与习题/C5_分数化小数/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../suanfa/src/main/java/算法竞赛_2/T2_循环结构程序设计/T5_注解与习题/C6_排列/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/ThreadDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/ThreadDemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/ReenterLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_1_重入锁/ReenterLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/Synchronized测试不是重入锁/SynchLockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_1_重入锁/Synchronized测试不是重入锁/SynchLockTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/中断响应/IntLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_1_重入锁/中断响应/IntLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/公平锁/FairLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_1_重入锁/公平锁/FairLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/锁申请等待限时/Timelock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_1_重入锁/锁申请等待限时/Timelock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/锁申请等待限时/TryLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_1_重入锁/锁申请等待限时/TryLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_2_重入锁的好搭档/conditionMethod/ReeterLockCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/conditionMethod/ReeterLockCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_3_信号量/SemapDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_3_信号量/SemapDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_4_ReadWriteLock读写锁/ReadWriteLockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_4_ReadWriteLock读写锁/ReadWriteLockDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_5_到计数器/CountDownLatchDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_5_到计数器/CountDownLatchDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T3_1_6_循环栅栏/CyclicBarrierDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/src/main/java/实战高并发程序设计/T3_JDK并发包/T1/T3_1_6_循环栅栏/CyclicBarrierDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/ReenterLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/Synchronized测试不是重入锁/SynchLockTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/中断响应/IntLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/公平锁/FairLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/锁申请等待限时/Timelock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_1_重入锁/锁申请等待限时/TryLock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_2_重入锁的好搭档/conditionMethod/ReeterLockCondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_3_信号量/SemapDemo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_3_信号量/SemapDemo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_3_信号量/SemapDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_4_ReadWriteLock读写锁/ReadWriteLockDemo$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_4_ReadWriteLock读写锁/ReadWriteLockDemo$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_4_ReadWriteLock读写锁/ReadWriteLockDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_5_到计数器/CountDownLatchDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_6_循环栅栏/CyclicBarrierDemo$BarrierRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_6_循环栅栏/CyclicBarrierDemo$Soldier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T3_JDK并发包/T3_1_6_循环栅栏/CyclicBarrierDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T_test_Thread/thread/demo/ThreadDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ThreadDemo/target/classes/实战高并发程序设计/T_test_Thread/thread/demo/ThreadDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javademo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/java/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/java/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Implementation1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Implementation1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Implementation1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Implementation1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Parcel6$1TrackingSlip.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Parcel6$1TrackingSlip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Parcel6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Parcel6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/ServiceFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/java/内部类/ServiceFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method$Thread1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method$Thread1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method$Thread2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method$Thread2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/classload/ClassAndObjectLnitialize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/classload/Father.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/classload/Son.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/classload/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/classload/Test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/classload/Testsdgfdfs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/classload/YeYe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/泛型/泛型集合插入多种类型数据/arrayList/ArrayListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/知识点/泛型/泛型集合插入多种类型数据/arrayList/ArrayListTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/知识点/类加载器及其委托机制的深入分析/BootStreapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/知识点/类加载器及其委托机制的深入分析/BootStreapTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zh/java/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zh/java/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../项目/麒龙/Mall-BE" beforeDir="false" afterPath="$PROJECT_DIR$/../../../项目/麒龙/Mall-BE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../项目/麒龙/TeaHouse" beforeDir="false" afterPath="$PROJECT_DIR$/../../../项目/麒龙/TeaHouse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../项目/麒龙/adminTeaHouse" beforeDir="false" afterPath="$PROJECT_DIR$/../../../项目/麒龙/adminTeaHouse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../项目/麒龙/cz-business-BE" beforeDir="false" afterPath="$PROJECT_DIR$/../../../项目/麒龙/cz-business-BE" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-149022802">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.open.time.72" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="4" />
+          <entry key="java" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="4" />
+          <entry key="JAVA" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="50870" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="50870" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1000950066">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="177" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="177" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/知识点/classload/类加载顺序/Class_ForName_Class_loadClass区别/ClassLoadDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/知识点/反射/反射方式/ClassDemo1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/知识点/反射/数据类型与包装类/PreClassDemo2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#902#903#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>G:\geren\ziliao\个人仓库\代码片段\开发路径\javademo\src\main\java\知识点\泛型\泛型集合插入多种类型数据\arrayList</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../资料/java-sdk-master" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/zh/java/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zh/java/内部类/Parcel6.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zh/java/内部类/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zh/java/内部类/ServiceFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zh/java/内部类/Implementation1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/泛型/泛型集合插入多种类型数据/arrayList/ArrayListTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/类加载器及其委托机制的深入分析/BootStreapTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/classload/Test1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/classload/ClassAndObjectLnitialize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/classload/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/classload/类加载顺序/Class_ForName_Class_loadClass区别/ClassLoadDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/反射/数据类型与包装类.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/反射/反射方式/ClassDemo1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/知识点/反射/数据类型与包装类/PreClassDemo2.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="G:\geren\ziliao\jiSuanJI\gongJU\maven\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>AOP</id>
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Chrome OSCorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Class metricsJava</id>
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Cloning issuesJava</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesGroovy</id>
+          </State>
+          <State>
+            <id>Control flow issuesJava</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>CorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Cucumber</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>FreeMarker</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>IconsUsabilityLintAndroid</id>
+          </State>
+          <State>
+            <id>InternationalizationJava</id>
+          </State>
+          <State>
+            <id>JBoss Seam</id>
+          </State>
+          <State>
+            <id>JSP</id>
+          </State>
+          <State>
+            <id>JUnitJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaBeans issuesJava</id>
+          </State>
+          <State>
+            <id>JavaFX</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavadocJava</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>MessagesCorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>OSGi</id>
+          </State>
+          <State>
+            <id>PerformanceJava</id>
+          </State>
+          <State>
+            <id>PerformanceLintAndroid</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
+            <id>Probable bugsCoffeeScript</id>
+          </State>
+          <State>
+            <id>Probable bugsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Probable bugsKotlin</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>RESTful Web Service</id>
+          </State>
+          <State>
+            <id>Redundant constructsKotlin</id>
+          </State>
+          <State>
+            <id>Reflective accessJava</id>
+          </State>
+          <State>
+            <id>RegExp</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>SecurityJava</id>
+          </State>
+          <State>
+            <id>SecurityLintAndroid</id>
+          </State>
+          <State>
+            <id>Serialization issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring BootSpring</id>
+          </State>
+          <State>
+            <id>Style issuesKotlin</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>UsabilityLintAndroid</id>
+          </State>
+          <State>
+            <id>Verbose or redundant code constructsJava</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="t1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="知识点" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="知识点" type="462c0819:PsiDirectoryNode" />
+              <item name="反射" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="javademo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javademo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="知识点" type="462c0819:PsiDirectoryNode" />
+              <item name="反射" type="462c0819:PsiDirectoryNode" />
+              <item name="反射方式" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="ClassLo&#9;PSI&#9;JAVA://java.lang.ClassLoader&#10;Class&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/misc/Launcher.class&#10;Launcher&#9;PSI&#9;JAVA://sun.misc.Launcher&#10;Bootst&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/runtime/linker/Bootstrap.class" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575629209872" />
+    <property name="last_opened_file_path" value="F:/麒龙/项目/adminTeaHouse" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.PreClassDemo2">
+    <configuration name="BootStreapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="知识点.类加载器及其委托机制的深入分析.BootStreapTest" />
+      <module name="javademo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="知识点.类加载器及其委托机制的深入分析.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="知识点.反射.反射方式.ClassDemo1" />
+      <module name="javademo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="知识点.反射.反射方式.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassLoadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="知识点.classload.类加载顺序.Class_ForName_Class_loadClass区别.ClassLoadDemo" />
+      <module name="javademo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="知识点.classload.类加载顺序.Class_ForName_Class_loadClass区别.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PreClassDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="知识点.反射.数据类型与包装类.PreClassDemo2" />
+      <module name="javademo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="知识点.反射.数据类型与包装类.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="知识点.classload.类加载顺序.Test" />
+      <module name="javademo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="知识点.classload.类加载顺序.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BootStreapTest" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.ClassLoadDemo" />
+      <item itemvalue="Application.ClassDemo1" />
+      <item itemvalue="Application.PreClassDemo2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PreClassDemo2" />
+        <item itemvalue="Application.ClassDemo1" />
+        <item itemvalue="Application.ClassLoadDemo" />
+        <item itemvalue="Application.BootStreapTest" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d97c91a9-a7a2-4328-a033-4471cfb9ff02" name="Default Changelist" comment="" />
+      <created>1570354163211</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570354163211</updated>
+      <workItem from="1570354168956" duration="7310000" />
+      <workItem from="1570981370805" duration="185000" />
+      <workItem from="1571014557040" duration="4000" />
+      <workItem from="1571619522197" duration="12000" />
+      <workItem from="1573571412149" duration="672000" />
+      <workItem from="1573693908459" duration="3126000" />
+      <workItem from="1575279746974" duration="2004000" />
+      <workItem from="1575360982097" duration="663000" />
+      <workItem from="1575367305516" duration="1143000" />
+      <workItem from="1575382994860" duration="1561000" />
+      <workItem from="1575420659636" duration="3552000" />
+      <workItem from="1575467566207" duration="1232000" />
+      <workItem from="1575506952608" duration="4639000" />
+      <workItem from="1575530003669" duration="2695000" />
+      <workItem from="1575594837216" duration="1693000" />
+      <workItem from="1575808511649" duration="578000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31069000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.18967828" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3264642" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32719547" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zh/java/内部类.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zh/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zh/java/内部类/Parcel6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zh/java/内部类/Implementation1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zh/java/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java高并发程序设计/T2_JAVA并行程序基础/test/t1/ThreadTest1_Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1288">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/泛型/泛型集合插入多种类型数据/arrayList/ArrayListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45819">
+          <caret line="1780" column="18" selection-start-line="1780" selection-start-column="18" selection-end-line="1780" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31644">
+          <caret line="1245" column="20" selection-start-line="1245" selection-start-column="19" selection-end-line="1245" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/java/util/ArrayList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zh/java/内部类/ServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zh/java/内部类/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/classload/类加载顺序/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/classload/类加载顺序/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/类加载器及其委托机制的深入分析/BootStreapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/classload/类加载顺序/ClassAndObjectLnitialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/javaws.jar!/com/sun/javaws/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="110" column="11" lean-forward="true" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/runtime/linker/Bootstrap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/misc/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="265" column="31" selection-start-line="265" selection-start-column="17" selection-end-line="265" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1533" column="13" selection-start-line="1533" selection-start-column="13" selection-end-line="1533" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="407" column="36" lean-forward="true" selection-start-line="407" selection-start-column="36" selection-end-line="407" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/反射/数据类型与包装类.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/classload/类加载顺序/Class_ForName_Class_loadClass区别/ClassLoadDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/反射/反射方式/ClassDemo1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/知识点/反射/数据类型与包装类/PreClassDemo2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#902#903#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

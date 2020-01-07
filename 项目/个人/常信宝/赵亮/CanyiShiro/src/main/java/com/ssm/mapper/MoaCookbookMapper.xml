@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.MoaCookbookMapper" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.entiy.MoaCookbook" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="week_id" property="weekId" jdbcType="INTEGER" />
+        <result column="cdate" property="cdate" jdbcType="DATE" />
+        <result column="cweek" property="cweek" jdbcType="VARCHAR" />
+        <result column="breakfast" property="breakfast" jdbcType="VARCHAR" />
+        <result column="lunch" property="lunch" jdbcType="VARCHAR" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+        <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+        <result column="del_flag" property="delFlag" jdbcType="CHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, week_id, cdate, cweek, breakfast, lunch, create_by, create_date, update_by, update_date, 
+        remarks, del_flag
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from moa_cookbook
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from moa_cookbook
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="com.ssm.entiy.MoaCookbook" >
+        insert into moa_cookbook (id, week_id, cdate, 
+            cweek, breakfast, lunch, 
+            create_by, create_date, update_by, 
+            update_date, remarks, del_flag
+            )
+        values (#{id,jdbcType=INTEGER}, #{weekId,jdbcType=INTEGER}, #{cdate,jdbcType=DATE}, 
+            #{cweek,jdbcType=VARCHAR}, #{breakfast,jdbcType=VARCHAR}, #{lunch,jdbcType=VARCHAR}, 
+            #{createBy,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, 
+            #{updateDate,jdbcType=TIMESTAMP}, #{remarks,jdbcType=VARCHAR}, #{delFlag,jdbcType=CHAR}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.ssm.entiy.MoaCookbook" >
+        insert into moa_cookbook
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="weekId != null" >
+                week_id,
+            </if>
+            <if test="cdate != null" >
+                cdate,
+            </if>
+            <if test="cweek != null" >
+                cweek,
+            </if>
+            <if test="breakfast != null" >
+                breakfast,
+            </if>
+            <if test="lunch != null" >
+                lunch,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="weekId != null" >
+                #{weekId,jdbcType=INTEGER},
+            </if>
+            <if test="cdate != null" >
+                #{cdate,jdbcType=DATE},
+            </if>
+            <if test="cweek != null" >
+                #{cweek,jdbcType=VARCHAR},
+            </if>
+            <if test="breakfast != null" >
+                #{breakfast,jdbcType=VARCHAR},
+            </if>
+            <if test="lunch != null" >
+                #{lunch,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.ssm.entiy.MoaCookbook" >
+        update moa_cookbook
+        <set >
+            <if test="weekId != null" >
+                week_id = #{weekId,jdbcType=INTEGER},
+            </if>
+            <if test="cdate != null" >
+                cdate = #{cdate,jdbcType=DATE},
+            </if>
+            <if test="cweek != null" >
+                cweek = #{cweek,jdbcType=VARCHAR},
+            </if>
+            <if test="breakfast != null" >
+                breakfast = #{breakfast,jdbcType=VARCHAR},
+            </if>
+            <if test="lunch != null" >
+                lunch = #{lunch,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.ssm.entiy.MoaCookbook" >
+        update moa_cookbook
+        set week_id = #{weekId,jdbcType=INTEGER},
+            cdate = #{cdate,jdbcType=DATE},
+            cweek = #{cweek,jdbcType=VARCHAR},
+            breakfast = #{breakfast,jdbcType=VARCHAR},
+            lunch = #{lunch,jdbcType=VARCHAR},
+            create_by = #{createBy,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIMESTAMP},
+            update_by = #{updateBy,jdbcType=VARCHAR},
+            update_date = #{updateDate,jdbcType=TIMESTAMP},
+            remarks = #{remarks,jdbcType=VARCHAR},
+            del_flag = #{delFlag,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <!-- List<Integer> getCookCdateList(); -->
+    <select id="getCookCdateList" resultMap="BaseResultMap">
+    	select * from moa_cookbook 
+    </select>
+    <!-- MoaCookbook findDateMoaCookbook(@Param("date")String date); -->
+    <select id="findDateMoaCookbook" resultMap="BaseResultMap">
+    	select * from moa_cookbook where  cdate=#{date}
+    </select>
+    <!-- List<MoaCookbook> getCookCdateListDate(@Param("id")Integer i); -->
+    <select id="getCookCdateListDate" resultMap="BaseResultMap">
+    	select * from moa_cookbook order by cdate 
+    	<if test="id==1">
+    		desc
+    	</if>
+    	<if test="id==0">
+    		asc
+    	</if>
+    </select>
+</mapper>

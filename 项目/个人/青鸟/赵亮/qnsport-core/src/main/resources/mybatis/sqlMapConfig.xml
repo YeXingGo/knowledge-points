@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- com.qingniao.core.pojo 下的实体类全部是首字母小写的别名 -->
+	<typeAliases>
+		<package name="com.qingniao.core.pojo"/>
+	</typeAliases>
+</configuration>

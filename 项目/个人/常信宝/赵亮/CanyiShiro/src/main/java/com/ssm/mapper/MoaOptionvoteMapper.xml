@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.MoaOptionvoteMapper" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.entiy.MoaOptionvote" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="activityvote_id" property="activityvoteId" jdbcType="INTEGER" />
+        <result column="ovname" property="ovname" jdbcType="VARCHAR" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+        <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+        <result column="del_flag" property="delFlag" jdbcType="INTEGER" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, activityvote_id, ovname, content, create_by, create_date, update_by, update_date, 
+        remarks, del_flag
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from moa_optionvote
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from moa_optionvote
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="com.ssm.entiy.MoaOptionvote" >
+        insert into moa_optionvote (id, activityvote_id, ovname, 
+            content, create_by, create_date, 
+            update_by, update_date, remarks, 
+            del_flag)
+        values (#{id,jdbcType=INTEGER}, #{activityvoteId,jdbcType=INTEGER}, #{ovname,jdbcType=VARCHAR}, 
+            #{content,jdbcType=VARCHAR}, #{createBy,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, 
+            #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP}, #{remarks,jdbcType=VARCHAR}, 
+            #{delFlag,jdbcType=INTEGER})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.ssm.entiy.MoaOptionvote" >
+        insert into moa_optionvote
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="activityvoteId != null" >
+                activityvote_id,
+            </if>
+            <if test="ovname != null" >
+                ovname,
+            </if>
+            <if test="content != null" >
+                content,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="activityvoteId != null" >
+                #{activityvoteId,jdbcType=INTEGER},
+            </if>
+            <if test="ovname != null" >
+                #{ovname,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null" >
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.ssm.entiy.MoaOptionvote" >
+        update moa_optionvote
+        <set >
+            <if test="activityvoteId != null" >
+                activityvote_id = #{activityvoteId,jdbcType=INTEGER},
+            </if>
+            <if test="ovname != null" >
+                ovname = #{ovname,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null" >
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.ssm.entiy.MoaOptionvote" >
+        update moa_optionvote
+        set activityvote_id = #{activityvoteId,jdbcType=INTEGER},
+            ovname = #{ovname,jdbcType=VARCHAR},
+            content = #{content,jdbcType=VARCHAR},
+            create_by = #{createBy,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIMESTAMP},
+            update_by = #{updateBy,jdbcType=VARCHAR},
+            update_date = #{updateDate,jdbcType=TIMESTAMP},
+            remarks = #{remarks,jdbcType=VARCHAR},
+            del_flag = #{delFlag,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

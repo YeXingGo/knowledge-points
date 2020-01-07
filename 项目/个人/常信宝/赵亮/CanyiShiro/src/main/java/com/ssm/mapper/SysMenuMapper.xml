@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.SysMenuMapper" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.entiy.SysMenu" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="parent_id" property="parentId" jdbcType="INTEGER" />
+        <result column="parent_ids" property="parentIds" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="sort" property="sort" jdbcType="INTEGER" />
+        <result column="href" property="href" jdbcType="VARCHAR" />
+        <result column="target" property="target" jdbcType="VARCHAR" />
+        <result column="icon" property="icon" jdbcType="VARCHAR" />
+        <result column="is_show" property="isShow" jdbcType="CHAR" />
+        <result column="permission" property="permission" jdbcType="VARCHAR" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+        <result column="create_date" property="createDate" jdbcType="TIME" />
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+        <result column="update_date" property="updateDate" jdbcType="TIME" />
+        <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+        <result column="del_flag" property="delFlag" jdbcType="CHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, parent_id, parent_ids, name, sort, href, target, icon, is_show, permission, create_by, 
+        create_date, update_by, update_date, remarks, del_flag
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from sys_menu
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from sys_menu
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="com.ssm.entiy.SysMenu" >
+        insert into sys_menu (id, parent_id, parent_ids, 
+            name, sort, href, 
+            target, icon, is_show, 
+            permission, create_by, create_date, 
+            update_by, update_date, remarks, 
+            del_flag)
+        values (#{id,jdbcType=INTEGER}, #{parentId,jdbcType=INTEGER}, #{parentIds,jdbcType=INTEGER}, 
+            #{name,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, #{href,jdbcType=VARCHAR}, 
+            #{target,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, #{isShow,jdbcType=CHAR}, 
+            #{permission,jdbcType=VARCHAR}, #{createBy,jdbcType=VARCHAR}, #{createDate,jdbcType=TIME}, 
+            #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIME}, #{remarks,jdbcType=VARCHAR}, 
+            #{delFlag,jdbcType=CHAR})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.ssm.entiy.SysMenu" >
+        insert into sys_menu
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="parentId != null" >
+                parent_id,
+            </if>
+            <if test="parentIds != null" >
+                parent_ids,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="sort != null" >
+                sort,
+            </if>
+            <if test="href != null" >
+                href,
+            </if>
+            <if test="target != null" >
+                target,
+            </if>
+            <if test="icon != null" >
+                icon,
+            </if>
+            <if test="isShow != null" >
+                is_show,
+            </if>
+            <if test="permission != null" >
+                permission,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="parentId != null" >
+                #{parentId,jdbcType=INTEGER},
+            </if>
+            <if test="parentIds != null" >
+                #{parentIds,jdbcType=INTEGER},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="href != null" >
+                #{href,jdbcType=VARCHAR},
+            </if>
+            <if test="target != null" >
+                #{target,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null" >
+                #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="isShow != null" >
+                #{isShow,jdbcType=CHAR},
+            </if>
+            <if test="permission != null" >
+                #{permission,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIME},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIME},
+            </if>
+            <if test="remarks != null" >
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.ssm.entiy.SysMenu" >
+        update sys_menu
+        <set >
+            <if test="parentId != null" >
+                parent_id = #{parentId,jdbcType=INTEGER},
+            </if>
+            <if test="parentIds != null" >
+                parent_ids = #{parentIds,jdbcType=INTEGER},
+            </if>
+            <if test="name != null" >
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="href != null" >
+                href = #{href,jdbcType=VARCHAR},
+            </if>
+            <if test="target != null" >
+                target = #{target,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null" >
+                icon = #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="isShow != null" >
+                is_show = #{isShow,jdbcType=CHAR},
+            </if>
+            <if test="permission != null" >
+                permission = #{permission,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIME},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIME},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.ssm.entiy.SysMenu" >
+        update sys_menu
+        set parent_id = #{parentId,jdbcType=INTEGER},
+            parent_ids = #{parentIds,jdbcType=INTEGER},
+            name = #{name,jdbcType=VARCHAR},
+            sort = #{sort,jdbcType=INTEGER},
+            href = #{href,jdbcType=VARCHAR},
+            target = #{target,jdbcType=VARCHAR},
+            icon = #{icon,jdbcType=VARCHAR},
+            is_show = #{isShow,jdbcType=CHAR},
+            permission = #{permission,jdbcType=VARCHAR},
+            create_by = #{createBy,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIME},
+            update_by = #{updateBy,jdbcType=VARCHAR},
+            update_date = #{updateDate,jdbcType=TIME},
+            remarks = #{remarks,jdbcType=VARCHAR},
+            del_flag = #{delFlag,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <!-- List<SysMenu> findBreakAndLunch(@Param("id")Integer id); -->
+	    <select id="findBreakAndLunch" resultMap="BaseResultMap">
+	    	select * from sys_menu where parent_id =#{id}
+	    </select>
+	    <!-- List<SysMenu> findCaiPin(@Param("id")Integer id); -->
+	    <select id="findCaiPin" resultMap="BaseResultMap">
+	    	select * from sys_menu where parent_ids=#{id}
+	    </select>
+</mapper>

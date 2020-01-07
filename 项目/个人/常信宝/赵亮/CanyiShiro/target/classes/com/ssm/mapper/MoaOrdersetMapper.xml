@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.MoaOrdersetMapper" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.entiy.MoaOrderset" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="cookbook_id" property="cookbookId" jdbcType="INTEGER" />
+        <result column="dish" property="dish" jdbcType="VARCHAR" />
+        <result column="maxcount" property="maxcount" jdbcType="INTEGER" />
+        <result column="nowcount" property="nowcount" jdbcType="INTEGER" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+        <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+        <result column="del_flag" property="delFlag" jdbcType="CHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, cookbook_id, dish, maxcount, nowcount, create_by, create_date, update_by, update_date, 
+        remarks, del_flag
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from moa_orderset
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from moa_orderset
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="com.ssm.entiy.MoaOrderset" >
+        insert into moa_orderset (id, cookbook_id, dish, 
+            maxcount, nowcount, create_by, 
+            create_date, update_by, update_date, 
+            remarks, del_flag)
+        values (#{id,jdbcType=INTEGER}, #{cookbookId,jdbcType=INTEGER}, #{dish,jdbcType=VARCHAR}, 
+            #{maxcount,jdbcType=INTEGER}, #{nowcount,jdbcType=INTEGER}, #{createBy,jdbcType=VARCHAR}, 
+            #{createDate,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP}, 
+            #{remarks,jdbcType=VARCHAR}, #{delFlag,jdbcType=CHAR})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.ssm.entiy.MoaOrderset" >
+        insert into moa_orderset
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="cookbookId != null" >
+                cookbook_id,
+            </if>
+            <if test="dish != null" >
+                dish,
+            </if>
+            <if test="maxcount != null" >
+                maxcount,
+            </if>
+            <if test="nowcount != null" >
+                nowcount,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="remarks != null" >
+                remarks,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="cookbookId != null" >
+                #{cookbookId,jdbcType=INTEGER},
+            </if>
+            <if test="dish != null" >
+                #{dish,jdbcType=VARCHAR},
+            </if>
+            <if test="maxcount != null" >
+                #{maxcount,jdbcType=INTEGER},
+            </if>
+            <if test="nowcount != null" >
+                #{nowcount,jdbcType=INTEGER},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.ssm.entiy.MoaOrderset" >
+        update moa_orderset
+        <set >
+            <if test="cookbookId != null" >
+                cookbook_id = #{cookbookId,jdbcType=INTEGER},
+            </if>
+            <if test="dish != null" >
+                dish = #{dish,jdbcType=VARCHAR},
+            </if>
+            <if test="maxcount != null" >
+                maxcount = #{maxcount,jdbcType=INTEGER},
+            </if>
+            <if test="nowcount != null" >
+                nowcount = #{nowcount,jdbcType=INTEGER},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null" >
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.ssm.entiy.MoaOrderset" >
+        update moa_orderset
+        set cookbook_id = #{cookbookId,jdbcType=INTEGER},
+            dish = #{dish,jdbcType=VARCHAR},
+            maxcount = #{maxcount,jdbcType=INTEGER},
+            nowcount = #{nowcount,jdbcType=INTEGER},
+            create_by = #{createBy,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIMESTAMP},
+            update_by = #{updateBy,jdbcType=VARCHAR},
+            update_date = #{updateDate,jdbcType=TIMESTAMP},
+            remarks = #{remarks,jdbcType=VARCHAR},
+            del_flag = #{delFlag,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <!-- List<MoaOrderset> getListOrderset(@Param("id")Integer id); -->
+    <select id="getListOrderset" resultMap="BaseResultMap">
+    	select * from moa_orderset where cookbook_id=#{id}
+    </select>
+</mapper>

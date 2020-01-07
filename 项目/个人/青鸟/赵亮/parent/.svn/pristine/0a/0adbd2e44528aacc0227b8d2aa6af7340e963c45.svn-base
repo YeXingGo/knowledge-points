@@ -1,0 +1,36 @@
+package com.qingniao.console.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.qingniao.core.pojo.Brand;
+import com.qingniao.core.service.BrandService;
+
+/**
+ * 品牌controller
+ * @author Lenovo
+ *
+ */
+@Controller
+public class BrandController {
+	@Autowired
+	private BrandService brandService;
+	//进入品牌页面
+	@RequestMapping("/brand/list.do")
+	public String brandList(){
+		return "brand/list";
+	}
+	//跳转到品牌添加
+	@RequestMapping("/brand/add.do")
+	public String add(){
+		return "brand/add";
+	}
+	@RequestMapping("/brand/save.do")
+	//编写品牌的添加方法
+	public String addBrand(Brand brand){
+ 		System.out.println(brand);
+		brandService.insertBrand(brand);
+		return "redirect:/brand/list.do";
+	}
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qingniao.core.dao.BrandMapper">
+	<!-- 品牌数据添加  -->
+	<insert id="insertBrand" parameterType="brand">
+		insert into qnsport_brand 
+		(id,name,description,logo,url,status)
+		values(#{id},#{name},#{description},#{logo},#{url},#{status})
+	</insert>
+	
+	<sql id="sqlfiled">
+		id,name,description,logo,url,status
+	</sql>
+	<!-- 通过条件的查询方法 -->
+	<select id="selectByExample" parameterType="brandExample" resultType="brand">
+		select <include refid="sqlfiled"></include> from qnsport_brand
+		<where>
+			<if test="status != null">
+				status =#{status}
+			</if>
+			<if test="name != null">
+				 and name like "%"#{name}"%"
+			</if>
+		</where>
+		<!-- 作为分页条件 -->
+		<if	test="startRow != null">
+			<!-- 
+				为什么不用判断pageSize为空？
+				因为给的有默认 在BrandExample中
+				Integer pageSize=3;
+			 -->
+			limit #{startRow} ,#{pageSize}
+		</if>
+	</select>
+	
+	<!-- 
+		查询 满足的记录数量
+			做为前台的页数显示
+	 -->
+	<select id="selectCount" resultType="Integer" parameterType="brandExample">
+		select count(id) from qnsport_brand
+		<where>
+			<if test="status != null">
+				status =#{status}
+			</if>
+			<if test="name != null">
+				 and name like "%"#{name}"%"
+			</if>
+		</where>
+	</select>
+</mapper>

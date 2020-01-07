@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.SysDictMapper" >
+
+    <resultMap id="BaseResultMap" type="com.ssm.entiy.SysDict" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="value" property="value" jdbcType="VARCHAR" />
+        <result column="label" property="label" jdbcType="VARCHAR" />
+        <result column="type" property="type" jdbcType="VARCHAR" />
+        <result column="description" property="description" jdbcType="VARCHAR" />
+        <result column="sort" property="sort" jdbcType="INTEGER" />
+        <result column="parent_id" property="parentId" jdbcType="VARCHAR" />
+        <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+        <result column="create_date" property="createDate" jdbcType="TIME" />
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+        <result column="update_date" property="updateDate" jdbcType="TIME" />
+        <result column="reamrks" property="reamrks" jdbcType="VARCHAR" />
+        <result column="del_flag" property="delFlag" jdbcType="CHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, value, label, type, description, sort, parent_id, create_by, create_date, update_by, 
+        update_date, reamrks, del_flag
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from sys_dict
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from sys_dict
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="com.ssm.entiy.SysDict" >
+        insert into sys_dict (id, value, label, 
+            type, description, sort, 
+            parent_id, create_by, create_date, 
+            update_by, update_date, reamrks, 
+            del_flag)
+        values (#{id,jdbcType=INTEGER}, #{value,jdbcType=VARCHAR}, #{label,jdbcType=VARCHAR}, 
+            #{type,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER}, 
+            #{parentId,jdbcType=VARCHAR}, #{createBy,jdbcType=VARCHAR}, #{createDate,jdbcType=TIME}, 
+            #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIME}, #{reamrks,jdbcType=VARCHAR}, 
+            #{delFlag,jdbcType=CHAR})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.ssm.entiy.SysDict" >
+        insert into sys_dict
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="value != null" >
+                value,
+            </if>
+            <if test="label != null" >
+                label,
+            </if>
+            <if test="type != null" >
+                type,
+            </if>
+            <if test="description != null" >
+                description,
+            </if>
+            <if test="sort != null" >
+                sort,
+            </if>
+            <if test="parentId != null" >
+                parent_id,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="reamrks != null" >
+                reamrks,
+            </if>
+            <if test="delFlag != null" >
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="value != null" >
+                #{value,jdbcType=VARCHAR},
+            </if>
+            <if test="label != null" >
+                #{label,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null" >
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null" >
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="parentId != null" >
+                #{parentId,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIME},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIME},
+            </if>
+            <if test="reamrks != null" >
+                #{reamrks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                #{delFlag,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.ssm.entiy.SysDict" >
+        update sys_dict
+        <set >
+            <if test="value != null" >
+                value = #{value,jdbcType=VARCHAR},
+            </if>
+            <if test="label != null" >
+                label = #{label,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null" >
+                type = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null" >
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null" >
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="parentId != null" >
+                parent_id = #{parentId,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIME},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIME},
+            </if>
+            <if test="reamrks != null" >
+                reamrks = #{reamrks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null" >
+                del_flag = #{delFlag,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.ssm.entiy.SysDict" >
+        update sys_dict
+        set value = #{value,jdbcType=VARCHAR},
+            label = #{label,jdbcType=VARCHAR},
+            type = #{type,jdbcType=VARCHAR},
+            description = #{description,jdbcType=VARCHAR},
+            sort = #{sort,jdbcType=INTEGER},
+            parent_id = #{parentId,jdbcType=VARCHAR},
+            create_by = #{createBy,jdbcType=VARCHAR},
+            create_date = #{createDate,jdbcType=TIME},
+            update_by = #{updateBy,jdbcType=VARCHAR},
+            update_date = #{updateDate,jdbcType=TIME},
+            reamrks = #{reamrks,jdbcType=VARCHAR},
+            del_flag = #{delFlag,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>
