@@ -29,7 +29,7 @@
     <aliyun.version>4.0.6</aliyun.version>
     <aliyun.dysmsapi>1.1.0</aliyun.dysmsapi>
     <junit.version>4.12</junit.version>
-    <mysql.driver.version>5.1.30</mysql.driver.version>
+    <mysql.driver.version>8.0.16</mysql.driver.version>
     <!--数据库连接池-->
     <commons.dbcp.version>1.2.2</commons.dbcp.version>
     <jstl.version>1.2</jstl.version>
@@ -349,7 +349,7 @@
           <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.38</version>
+            <version>8.0.16</version>
           </dependency>
           <dependency>
             <groupId>org.mybatis.generator</groupId>
