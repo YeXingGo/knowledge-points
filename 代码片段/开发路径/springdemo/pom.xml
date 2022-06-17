@@ -23,7 +23,7 @@
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mybatis-spring-boot-version>1.3.2</mybatis-spring-boot-version>
-    <fastjson-version>1.2.47</fastjson-version>
+    <fastjson-version>1.2.83</fastjson-version>
     <pagehelper.vesion>5.0.0</pagehelper.vesion>
     <redis-version>1.3.8.RELEASE</redis-version>
     <aliyun.version>4.0.6</aliyun.version>
